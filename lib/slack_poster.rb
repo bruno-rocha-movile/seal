@@ -16,17 +16,11 @@ class SlackPoster
   end
 
   def create_poster
-    @poster = Slack::Poster.new("#{webhook_url}", slack_options)
+    @poster = Slack::Poster.new(@webhook_url, slack_options)
   end
 
   def send_request(message)
-    if ENV['DRY']
-      puts "Will#{' not' unless postable_day} post #{mood} message to #{channel} on #{today.strftime('%A')}"
-      puts slack_options.inspect
-      puts message
-    else
-      poster.send_message(message) if postable_day
-    end
+    @poster.send_message(message)
   end
 
   private
@@ -37,7 +31,7 @@ class SlackPoster
     {
      icon_emoji: @mood_hash[:icon_emoji],
      username: @mood_hash[:username],
-     channel: @team_channel
+     channel: "#it-br-ios-dev"
    }
   end
 

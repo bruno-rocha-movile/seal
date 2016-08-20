@@ -35,9 +35,13 @@ class Seal
   def bark_at(team)
     message_builder = MessageBuilder.new(team_params(team), @mode)
     message = message_builder.build
-    channel = ENV["SLACK_CHANNEL"] ? ENV["SLACK_CHANNEL"] : team_config(team)['channel']
+    puts "ok"
+    channel = team_config(team)['channel']
+    puts "ok"
     slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
+    puts "ok"
     slack.send_request(message)
+    puts "ok"
   end
 
   def org_config
