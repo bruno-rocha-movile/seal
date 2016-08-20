@@ -38,7 +38,7 @@ class MessageBuilder
     else
       weekdays_age = actual_age
     end
-    weekdays_age > 2
+    weekdays_age > 1
   end
 
   private
