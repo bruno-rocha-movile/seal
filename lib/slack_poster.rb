@@ -30,7 +30,7 @@ class SlackPoster
     {
      icon_emoji: @mood_hash[:icon_emoji],
      username: @mood_hash[:username],
-     channel: "@bruno.rocha"
+     channel: @team_channel
    }
   end
 
