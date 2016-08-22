@@ -43,14 +43,14 @@ class SlackPoster
 
   def assign_poster_settings
     if @mood == "informative"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}informative_seal:"
-      @mood_hash[:username]= "#{@season_name}Informative Seal"
+      @mood_hash[:icon_emoji]= ":#{@season_symbol}informative_fabricio:"
+      @mood_hash[:username]= "#{@season_name}Informative Fabricio"
     elsif @mood == "approval"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}seal_of_approval:"
-      @mood_hash[:username]= "#{@season_name}Seal of Approval"
+      @mood_hash[:icon_emoji]= ":#{@season_symbol}informative_fabricio:"
+      @mood_hash[:username]= "#{@season_name}Fabricio of Approval"
     elsif @mood == "angry"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_seal:"
-      @mood_hash[:username]= "#{@season_name}Angry Seal"
+      @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_fabricio:"
+      @mood_hash[:username]= "#{@season_name}Angry Fabricio"
     elsif @mood == "tea"
       @mood_hash[:icon_emoji]= ":manatea:"
       @mood_hash[:username]= "Tea Seal"
@@ -96,9 +96,5 @@ class SlackPoster
       @mood = "charter"
       @postable_day = today.tuesday? || today.thursday?
     end
-  end
-
-  def channel
-    @team_channel = '#angry-seal-bot-test' if ENV["DYNO"].nil?
   end
 end
