@@ -48,7 +48,7 @@ class MessageBuilder
   end
 
   def bark_about_old_pull_requests
-    informative_bark = "<@channel> ping test"
+    informative_bark = "<@it-br-ios-dev|channel> ping test"
     #angry_bark = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
     #recent_pull_requests = @content.reject { |_title, pr| rotten?(pr) }
     #list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
