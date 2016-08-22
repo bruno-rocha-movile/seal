@@ -11,7 +11,6 @@ class SlackPoster
     @today = Date.today
     @postable_day = !today.saturday? && !today.sunday?
     mood_hash
-    channel
     create_poster
   end
 
@@ -31,7 +30,7 @@ class SlackPoster
     {
      icon_emoji: @mood_hash[:icon_emoji],
      username: @mood_hash[:username],
-     channel: "#it-br-ios-dev"
+     channel: @team_channel
    }
   end
 
