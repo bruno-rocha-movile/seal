@@ -62,7 +62,7 @@ class MessageBuilder
   end
 
   def no_pull_requests
-    "No pull requests to review today! :partyparrot: :partyparrot: :partyparrot: :partyparrot:"
+    "No pull requests to review today! :leche:"
   end
 
   def bark_about_quotes
