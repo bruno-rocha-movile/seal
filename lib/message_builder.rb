@@ -67,7 +67,7 @@ class MessageBuilder
   end
 
   def no_pull_requests
-    "<!#{@ping}> No pull requests to review today! :leche:"
+    "No pull requests to review today! :leche:"
   end
 
   def bark_about_quotes
