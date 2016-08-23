@@ -37,7 +37,7 @@ class Seal
     message = message_builder.build
     channel = team_config(team)['channel']
     slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
-    slack.send_request(message)
+    #slack.send_request(message)
   end
 
   def org_config
