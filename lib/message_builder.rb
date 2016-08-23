@@ -1,10 +1,15 @@
 class MessageBuilder
 
-  attr_accessor :pull_requests, :report, :mood, :poster_mood
+  attr_accessor :pull_requests, :report, :mood, :poster_mood, :ping
 
-  def initialize(content, mode=nil)
+  def initialize(content, ping, mode=nil)
     @content = content
     @mode = mode
+    if ping == nil
+      @ping = ping
+    else
+      @ping = "channel"
+    end
   end
 
   def build
@@ -52,17 +57,17 @@ class MessageBuilder
     recent_pull_requests = @content.reject { |_title, pr| rotten?(pr) }
     list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
     informative_bark = "There are also these pull requests that need to be reviewed today:\n\n#{list_recent_pull_requests.join} " if !recent_pull_requests.empty?
-    "<!channel> AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you forget to review your pull requests, a baby seal steps on a lego.
+    "<!#{@ping}> AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you forget to review your pull requests, a baby seal steps on a lego.
     \n\n#{informative_bark}"
   end
 
   def list_pull_requests
     message = @content.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "<!channel> Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{message.join}\nGo Movile!"
+    "<!#{@ping}> Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{message.join}\nGo Movile!"
   end
 
   def no_pull_requests
-    "No pull requests to review today! :leche:"
+    "<!#{@ping}> No pull requests to review today! :leche:"
   end
 
   def bark_about_quotes
