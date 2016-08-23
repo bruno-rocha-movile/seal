@@ -5,7 +5,7 @@ class MessageBuilder
   def initialize(content, ping, mode=nil)
     @content = content
     @mode = mode
-    if ping == nil
+    if ping != nil
       @ping = ping
     else
       @ping = "channel"
