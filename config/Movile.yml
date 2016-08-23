@@ -52,3 +52,17 @@ releases-smartphones-ios:
 
   quotes:
     - ...
+
+releases-smartphones-multiplat:
+  members:
+    - gustavo-silva-movile
+    - ricardo-charf-movile
+
+  channel:
+    "#it-br-multiplat-dev"
+
+  exclude_titles:
+    - WIP
+
+  quotes:
+    - ...
