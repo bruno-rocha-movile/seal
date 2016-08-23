@@ -3,12 +3,10 @@
 infra:
   members:
     - alexandre-zia-movile
-    - alexei-znamensky-movile
     - demetrios-andrigo-movile
     - fabio-santos-movile
     - hugo-cisneiros-movile
     - hugo-cisneiros-movile
-    - jean-feltrin-movile
     - bruno-rossi-movile 
     - maycson-fonseca-movile
     - tiago-cruz-movile
@@ -59,7 +57,7 @@ releases-smartphones-multiplat:
     - ricardo-charf-movile
 
   channel:
-    "#it-br-multiplat-dev"
+    "#it-br-multiplat"
 
   exclude_titles:
     - WIP
