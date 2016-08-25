@@ -29,6 +29,7 @@ releases-smartphones-android:
     - jefferson-silva-movile
     - bernardo-amaral-movile
     - tiago-chaves-movile
+    - renan-lukas-movile
 
   channel:
     "#it-br-android-dev"
