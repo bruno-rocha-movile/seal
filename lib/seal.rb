@@ -36,7 +36,7 @@ class Seal
     message_builder = MessageBuilder.new(team_params(team), team_config(team)['ping'], @mode)
     message = message_builder.build
     channel = team_config(team)['channel']
-    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
+    slack = SlackPoster.new(ENV["ROCKET_WEBHOOK_#{channel}"], channel, message_builder.poster_mood)
     slack.send_request(message)
   end
 

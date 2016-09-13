@@ -1,4 +1,5 @@
-require 'slack-poster'
+require "net/http"
+require "uri"
 
 class SlackPoster
 
@@ -11,28 +12,18 @@ class SlackPoster
     @today = Date.today
     @postable_day = !today.saturday? && !today.sunday?
     mood_hash
-    create_poster
-  end
-
-  def create_poster
-    @poster = Slack::Poster.new(@webhook_url, slack_options)
   end
 
   def send_request(message)
-    @poster.send_message(message)
+  	puts message
+  	uri = URI.parse("#{@webhook_url}")
+  	response = Net::HTTP.post_form(uri, {"username" => "#{@mood_hash[:username]}", "icon_emoji" => "#{@mood_hash[:icon_emoji]}", "text" => "#{message}"})
+  	puts response
   end
 
   private
 
   attr_reader :postable_day, :today
-
-  def slack_options
-    {
-     icon_emoji: @mood_hash[:icon_emoji],
-     username: @mood_hash[:username],
-     channel: @team_channel
-   }
-  end
 
   def mood_hash
     @mood_hash = {}
