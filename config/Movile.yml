@@ -1,28 +1,5 @@
 # Please insert new items alphabetically.
 
-infra:
-  members:
-    - alexandre-zia-movile
-    - demetrios-andrigo-movile
-    - fabio-santos-movile
-    - hugo-cisneiros-movile
-    - hugo-cisneiros-movile
-    - bruno-rossi-movile 
-    - maycson-fonseca-movile
-    - tiago-cruz-movile
-
-  channel:
-    "infra"
-
-  ping:
-    "infra-team"
-
-  exclude_titles:
-    - WIP
-
-  quotes:
-    - ...
-
 releases-smartphones-android:
   members:
     - rene-argento-movile
