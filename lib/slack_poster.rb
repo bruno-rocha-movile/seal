@@ -61,7 +61,7 @@ class SlackPoster
     else
       @season_name = ""
     end
-    @season_symbol = snake_case(@season_name)
+    @season_symbol = "brunobots_" + snake_case(@season_name)
   end
 
   def halloween_season?
