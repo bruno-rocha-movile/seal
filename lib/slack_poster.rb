@@ -1,5 +1,5 @@
-require "net/http"
-require "uri"
+require 'httparty'
+require 'json'
 
 class SlackPoster
 
@@ -16,9 +16,7 @@ class SlackPoster
 
   def send_request(message)
   	puts message
-  	uri = URI.parse("#{@webhook_url}")
-  	response = Net::HTTP.post_form(uri, {"username" => "asd", "icon_emoji" => ":asd:", "text" => "aa"})
-  	puts response
+    HTTParty.post("https://hooks.slack.com/services/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", body: {username: "#{@mood_hash[:username]}", icon_emoji: "#{@mood_hash[:icon_emoji]}", text: "#{message}"}.to_json)
   end
 
   private
