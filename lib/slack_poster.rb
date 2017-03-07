@@ -17,7 +17,7 @@ class SlackPoster
   def send_request(message)
   	puts message
   	uri = URI.parse("#{@webhook_url}")
-    puts(uri)
+    puts("#{@webhook_url}")
     puts("#{@mood_hash[:username]}")
     puts("#{@mood_hash[:icon_emoji]}")
     puts("#{message}")
