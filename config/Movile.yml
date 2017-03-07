@@ -9,7 +9,7 @@ releases-smartphones-android:
     - renan-lukas-movile
 
   channel:
-    "it-br-android-dev"
+    "#it-br-android-dev"
 
   exclude_titles:
     - WIP
@@ -24,7 +24,7 @@ releases-smartphones-ios:
     - mateus-silveira-movile
 
   channel:
-    "it-br-ios-dev"
+    "#it-br-ios-dev"
 
   exclude_titles:
     - WIP
@@ -38,7 +38,7 @@ releases-smartphones-multiplat:
     - ricardo-charf-movile
 
   channel:
-    "it-br-multiplat"
+    "#it-br-multiplat"
 
   exclude_titles:
     - WIP
