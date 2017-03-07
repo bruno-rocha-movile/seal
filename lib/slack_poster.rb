@@ -17,7 +17,7 @@ class SlackPoster
   def send_request(message)
   	puts message
   	uri = URI.parse("#{@webhook_url}")
-  	response = Net::HTTP.post_form(uri, {"username" => "#{@mood_hash[:username]}", "icon_emoji" => "#{@mood_hash[:icon_emoji]}", "text" => "#{message}"})
+  	response = Net::HTTP.post_form(uri, {"username" => "asd", "icon_emoji" => ":asd:", "text" => "aa"})
   	puts response
   end
 
