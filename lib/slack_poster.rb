@@ -16,7 +16,7 @@ class SlackPoster
 
   def send_request(message)
   	puts message
-    HTTParty.post("https://hooks.slack.com/services/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", body: {username: "#{@mood_hash[:username]}", icon_emoji: "#{@mood_hash[:icon_emoji]}", text: "#{message}"}.to_json)
+    HTTParty.post("#{@webhook_url}", body: {username: "#{@mood_hash[:username]}", icon_emoji: "#{@mood_hash[:icon_emoji]}", text: "#{message}"}.to_json)
   end
 
   private
