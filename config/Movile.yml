@@ -19,9 +19,10 @@ releases-smartphones-android:
 
 releases-smartphones-ios:
   members:
-    - bruno-rocha-movile
     - rafael-alencar-movile
     - mateus-silveira-movile
+    - felipe-valio-movile
+    - matheus-maaz-movile
 
   channel:
     "#it-br-ios-dev"
