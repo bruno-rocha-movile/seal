@@ -46,3 +46,17 @@ releases-smartphones-multiplat:
 
   quotes:
     - ...
+
+rapiddo-ios:
+  members:
+    - bruno-rocha-movile
+    - mateus-silveira-movile
+
+  channel:
+    "#ios-dev"
+
+  exclude_titles:
+    - WIP
+
+  quotes:
+    - ...
