@@ -50,7 +50,8 @@ releases-smartphones-multiplat:
 rapiddo-ios:
   members:
     - bruno-rocha-movile
-    - mateus-silveira-movile
+    - raissa-nucci-movile
+    - guilherme-andrade-movile
 
   channel:
     "#ios-dev"
